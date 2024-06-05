@@ -1,0 +1,40 @@
+{
+  "Flight": [
+    {
+      "number": "0569",
+      "origin": "medellin",
+      "destination": "medellin",
+      "departure": "2024-06-19",
+      "arrival": "2024-06-20",
+      "id": "0569"
+    }
+  ],
+  "Role": [
+    {
+      "id": 0,
+      "name": "user"
+    },
+    {
+      "id": 1,
+      "name": "admin"
+    }
+  ],
+  "User": [
+    {
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "birthdate": "2024-06-04",
+      "password": "admin2024",
+      "roleId": 1
+    },
+    {
+      "id": "daca",
+      "name": "alejandro Rivas",
+      "email": "a.rivaslopez020@gmail.com",
+      "birthdate": "1996-10-20",
+      "password": "12345",
+      "roleId": 0
+    }
+  ],
+  "Booking": []
+}
