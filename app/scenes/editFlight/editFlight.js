@@ -3,7 +3,14 @@ import { navigateTo } from "../../Router";
 export function EditFlightScene() {
     const productInfo = JSON.parse(sessionStorage.getItem('productInfo') || '{}');
     const { number, origin, destination, departure, arrival, capacity } = productInfo;
-    
+
+    let  from =origin.split(':')[1];
+    let to = destination.split(':')[1];
+    let initialDate =  new Date(departure.split(':')[1]).toISOString().split('T')[0];
+    let finalDate = new Date(arrival.split(':')[1]).toISOString().split('T')[0];
+    let capacityFlight = Number(capacity.split(':')[1]);
+
+    console.log(capacityFlight);
 
     const pageContent = `
         <div class="editProductContainer">
@@ -12,15 +19,15 @@ export function EditFlightScene() {
                 <label for="id">Vuelo Numero:</label>
                 <input type="text" id="id" name="id" value="${number}" disabled><br>
                 <label for="description">Origen:</label>
-                <input type="text" id="description" name="origin" value="${origin}" required><br>
+                <input type="text" id="description" name="origin" value="${from}" disabled><br>
                 <label for="destination">Destino:</label>
-                <input type="text" id="destination" name="destination" value="${destination}" required><br>
+                <input type="text" id="destination" name="destination" value="${to}" disabled><br>
                 <label for="departure">Desde:</label>
-                <input type="date" id="departure" name="departure" value="${departure}" required><br>
+                <input type="date" id="departure" name="departure" value="${initialDate}" required><br>
                 <label for="arrival">Hasta:</label>
-                <input type="date" id="arrival" name="arrival" value="${arrival}" required><br>
-                <label for="capacity">Hasta:</label>
-                <input type="number" id="capacity" name="capacity" value="${capacity}" required><br>
+                <input type="date" id="arrival" name="arrival" value="${finalDate}" required><br>
+                <label for="capacity">capacidad:</label>
+                <input type="number" id="capacity" name="capacity" value="${capacityFlight}" disabled><br>
                 
                 <button type="submit">Save Changes</button>
             </form>

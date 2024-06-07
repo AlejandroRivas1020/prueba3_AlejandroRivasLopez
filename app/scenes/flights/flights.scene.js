@@ -37,7 +37,8 @@ const pageContent =`
         const $capacity = document.getElementById("capacity")
         const $formFlights = document.getElementById("button-flights")
         
-    
+        
+        
         $formFlights.addEventListener("click", async (event)=>{
             event.preventDefault();
     

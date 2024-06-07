@@ -50,7 +50,7 @@ const logic = () =>{
                     <p>Destino: ${flight.destination}</p>
                     <h4>Fecha Inicio: ${flight.departure}</h4>
                     <h4>Fecha Regreso: ${flight.arrival}</h4>
-                    <p>Cantidad: ${flight.capacity}<p><br>
+                    <h5>Cantidad: ${flight.capacity}<h5><br>
                 </div>
                 <div class="buttons">
                     ${cardButton}
@@ -82,7 +82,7 @@ const logic = () =>{
                     const destination = card.querySelector('p').textContent;
                     const departure = card.querySelector('h4').textContent;
                     const arrival = card.querySelector('h4').textContent;
-                    const capacity = card.querySelector('p').textContent;
+                    const capacity = card.querySelector('h5').textContent;
 
                     // Crear la información del producto
                     const productInfo = { number, origin, destination, departure, arrival, capacity };
@@ -106,7 +106,7 @@ const logic = () =>{
                     const destination = card.querySelector('p').textContent;
                     const departure = card.querySelector('h4').textContent;
                     const arrival = card.querySelector('h4').textContent;
-                    const capacity = card.querySelector('p').textContent;
+                    const capacity = card.querySelector('h5').textContent;
 
                     const productInfo = { number, origin, destination, departure, arrival ,capacity};
                     sessionStorage.setItem('productInfo', JSON.stringify(productInfo));
