@@ -10,7 +10,7 @@ export function NavbarLayout(pageContent,logic) {
 
     root.innerHTML = `
         <nav class="${styles.nav}">
-            <a href="/reserve">Reservar</a>
+            <a href="/home">Reservar</a>
             ${logOut}
         </nav>
         ${pageContent};

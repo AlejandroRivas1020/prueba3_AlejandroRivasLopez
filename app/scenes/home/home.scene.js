@@ -45,18 +45,18 @@ const logic = () =>{
         card.innerHTML = `
             <div class="${styles.card}">
                 <div class="info">
-                    <h3>${flight.number}</h3>
-                    <p>${flight.origin}</p>
-                    <p>${flight.destination}</p>
-                    <h4>${flight.departure}</h4>
-                    <h4>${flight.arrival}</h4>
-                    <small>Cantidad: ${flight.capacity}</small><br>
+                    <h3>Numero de vuelo:${flight.number}</h3>
+                    <p>Origen: ${flight.origin}</p>
+                    <p>Destino: ${flight.destination}</p>
+                    <h4>Fecha Inicio: ${flight.departure}</h4>
+                    <h4>Fecha Regreso: ${flight.arrival}</h4>
+                    <p>Cantidad: ${flight.capacity}<p><br>
                 </div>
                 <div class="buttons">
                     ${cardButton}
                 </div>
             </div>
-        `;
+        `   
 
         const deleteButton = card.querySelector('.delete');
         if (deleteButton) {
@@ -82,14 +82,14 @@ const logic = () =>{
                     const destination = card.querySelector('p').textContent;
                     const departure = card.querySelector('h4').textContent;
                     const arrival = card.querySelector('h4').textContent;
-                    const capacity = card.querySelector('h4').textContent;
+                    const capacity = card.querySelector('p').textContent;
 
                     // Crear la información del producto
                     const productInfo = { number, origin, destination, departure, arrival, capacity };
                     sessionStorage.setItem('productInfo', JSON.stringify(productInfo));
 
                     // Navegar a la página de orden
-                    navigateTo('/reserve');
+                    navigateTo('/home');
                 });
             });
         }
@@ -106,7 +106,7 @@ const logic = () =>{
                     const destination = card.querySelector('p').textContent;
                     const departure = card.querySelector('h4').textContent;
                     const arrival = card.querySelector('h4').textContent;
-                    const capacity = card.querySelector('h4').textContent;
+                    const capacity = card.querySelector('p').textContent;
 
                     const productInfo = { number, origin, destination, departure, arrival ,capacity};
                     sessionStorage.setItem('productInfo', JSON.stringify(productInfo));

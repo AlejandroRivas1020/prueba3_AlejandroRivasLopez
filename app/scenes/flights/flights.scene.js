@@ -21,7 +21,7 @@ const pageContent =`
             <input type = "date" id="arrival" placeholder ="YYYY-MM-DD"  />
 
             <label for="capacity">Capacity: </label>            
-            <input type = "number" id="capacity" placeholder ="0000"  />
+            <input type = "text" id="capacity" placeholder ="0000"  />
 
             <button type ="submit"id="button-flights">Send</button>
         </form>

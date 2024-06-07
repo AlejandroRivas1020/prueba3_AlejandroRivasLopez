@@ -14,7 +14,7 @@ export function Router() {
 
     if (path === '/' ) {
         if (!localStorage.getItem('token')) {
-            navigateTo('/home');
+            navigateTo('/login');
             return;
         }
     }
